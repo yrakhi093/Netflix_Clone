@@ -1,0 +1,167 @@
+.navbar{
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+    &.scrolled{
+        background-color: var(--main-color);
+    }
+    .containerNav{
+        padding: 0% 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+
+        .left{
+            display: flex;
+            align-items: center ;
+           
+
+           
+            
+            img{
+                height: 25px;
+                margin-right: 40px;
+            }
+            span{
+                margin: 20px;
+                cursor: pointer;
+            }
+        }
+       
+        .right{
+            display: flex;
+            align-items: center;
+            // background-color: green;
+
+            .icons{
+                // background-color: red;
+                margin: 0px 15px;
+                // margin: 0% 15% 0% 0%;
+
+                cursor: pointer;
+            }
+            .densityIcon{
+                display: none;
+            }
+            .sidebarList{
+                display: none;
+            }
+           
+            .profile{
+                .imgProf{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    cursor: pointer;
+                    
+                }
+                &:hover{
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        background-color: var(--main-color);
+                    }
+                }
+                
+                .options{
+                    display: none;
+                }
+                span{
+                    padding: 10px;
+                    cursor: pointer;
+                }    
+            }
+        }
+    }
+}
+
+$breakpoint-tablet: 418px;
+@media (max-width: $breakpoint-tablet) {
+
+   .navbar{
+    .containerNav{
+      
+  
+        padding: 0% 5%;
+
+        .leftSmall{
+     
+            cursor: pointer;
+            .sidebarList{
+               
+                cursor: pointer;
+               
+              
+                display: flex;
+        
+                justify-content: center;
+                align-items: center;
+
+               
+                gap: 10px;
+                // padding: 15px;
+              
+
+            }
+        }
+      .left{
+      
+        .leftNav{
+            display: none;
+        }
+    }
+    .right{
+        .icons{
+            display: none;
+        }
+       .profile{
+        display: block;
+        // background-color: red;
+       
+       }
+       .densityIcon{
+        // background-color: red;
+        display: block;
+        position: absolute;
+        left: 10%;
+        top: 30%;
+        align-items: center;
+        justify-content: center;
+    }
+    .smallNav{
+        // background-color: red;
+        width: 50vh;
+        display: flex;
+        justify-content: space-between
+    }
+    .sidebarList{
+        display: flex;
+        position: absolute;
+        left: 5%;
+        top: 40%;
+        gap: 30px;
+        align-items: center;
+        // justify-content:;
+        // background-color: blue;
+        width: 100vw
+    }
+    }
+
+    }
+    
+   }
+};
+
+@media (min-width: 418px ){
+    .leftSmall{
+        display: none;
+    }
+}

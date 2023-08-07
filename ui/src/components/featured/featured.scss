@@ -1,0 +1,191 @@
+.featured{
+    height: 90vh;
+    position: relative;
+    // background-color: red;
+
+    .category{
+        position: absolute;
+        top: 80px;
+        left: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+
+        select{
+            cursor: pointer;
+            background-color: var(--main-color);
+            color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            padding: 5px ;
+        }
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .info{
+        width: 35%;
+        position: absolute;
+        left: 50px;
+        bottom: 60px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            width: 40vw;
+            margin-top: 100px;
+        }
+        .desc{
+            margin: 20px 0px
+        }
+
+        .buttons{
+            display: flex;
+
+            button{
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                border-radius: 50px ;
+                border: none;
+                font-size: 18px;
+                font-weight: 500;
+                cursor: pointer;
+                
+                &.play{
+                    background-color: white;
+                    color: var(-main-color);
+                }
+
+                &.more{
+                    background-color: gray;
+                    color: white;
+                }
+
+                span{
+                    margin-left: 5px;
+                }
+
+            }
+        }
+
+
+    }
+
+    
+}
+
+
+// $breakpoint-tablet: 418px;
+
+// @media (min-width: $breakpoint-tablet ){
+//     .featured{
+//         .info{
+//             .desc{
+//                 display: none;
+//             }
+//         }
+//     }
+// }
+
+$breakpoint-tablet-min: 320px;
+$breakpoint-tablet-max: 480px;
+@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max)  {
+    .featured{
+        height: 50vh;
+        img{
+            width: 80vw;
+            height: 40vh;
+            // margin: 20% 40% 10% 10%;
+            position: absolute;
+            // top: 0%;
+            left: 0%;
+            margin: 20% 10%;
+            // position: absolute; 
+            // object-fit: cover;
+            border-radius: 5%;
+        }
+        .info{
+            // background-color: blue;
+            position: relative;
+            top: 0%;
+            left: 10%;
+            width: 60vw;
+            .titleImg{
+                position: relative;
+                top: 20vh;
+                left: 0%;
+                width: 30vw;
+                height: 15vh;
+                // margin-top: 40%;
+                // position: absolute;
+                // left: 0%;
+                // bottom: 50%;
+                // top: 50%;
+                // position: fixed;
+                // object-fit: contain;
+                // object-fit: cover;
+            }
+            .desc{
+                display: none;
+            }
+            
+            .buttons{
+                // display: flex;
+    
+                button{
+                    // padding: 10px 20px;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    // margin-right: 10px;
+                    // border-radius: 50% ;
+                    // width: 40%;
+                    // height: 70%;
+                    // border: none;
+
+                    // font-size: 18px;
+                    // font-weight: 500;
+                    cursor: pointer;
+               
+                    
+                    &.play{
+                        position: relative;
+                        bottom: 10vh;
+                        left: 40vw;
+                        background-color: red;
+                        color: white;
+                        width: 10%;
+                        height: 10%;
+                        border-radius: 60%;
+                        // position: absolute;
+                        .playText{
+                            display: none;
+                        }
+                    }
+    
+                    &.more{
+                        display: none;
+                    }
+    
+                    span{
+                        margin-left: 5px;
+                    }
+    
+                }
+            }
+            
+        }
+    }
+
+}
